@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import Coin from "./Coin";
+import Homecss from "./Home.css";
+import logo from "../images/Screenshot 2022-07-13 135114.webp";
 
 const Home = () => {
   const [coinsList, setCoinsList] = React.useState({});
@@ -30,26 +32,48 @@ const Home = () => {
 
   const getCoins = async () => {
     let response = await axios.request(options);
-    console.log(response.data);
+    // console.log(response.data);
+    console.log(response.data.data);
     setCoinsList(response.data.data);
   };
 
   return (
     <div>
-      <Link to="/about">About</Link>
-      <Link to="/contact">Contact</Link>
-      <h1>Welcome!</h1>
+      <nav className="navcss">
+        <div>
+          <Link to="/home" className="navlinks" style={{ color: "#272727" }}>
+            Home
+          </Link>
+          <Link to="/contact" className="navlinks" style={{ color: "#272727" }}>
+            Contact Us
+          </Link>
+          <Link to="/about" className="navlinks" style={{ color: "#272727" }}>
+            About
+          </Link>
+        </div>
+      </nav>
+      <h1>Crypto-Listo </h1>
       <br></br>
-      <ul>
+      <p>From Algorand to USDC. See the top ranked crypto currencies. </p>
+      <div className="homeflex">
         {coinsList.coins &&
           coinsList.coins.map(function (coin) {
             return (
-              <li>
-                <Link to={`/coin/${coin.uuid}`}>{coin.name}</Link>
-              </li>
+              <div>
+                <Link to={`/coin/${coin.uuid}`}>
+                  <img
+                    src={coin.iconUrl}
+                    alt={coin.name}
+                    width="100"
+                    height="100"
+                    className="mobileimg"
+                  />
+                </Link>
+                <p className="mobileimgp">{coin.name}</p>
+              </div>
             );
           })}
-      </ul>
+      </div>
     </div>
   );
 };

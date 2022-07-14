@@ -6,6 +6,8 @@ import Opening from "./components/Opening";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Coin from "./components/Coin";
+import CreateAcc from "./components/CreateAcc";
+import Fund from "./components/Fund";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/coin/:uuid" element={<Coin />} />
+        <Route path="/createacc" element={<CreateAcc />} />
+        <Route path="/fund" element={<Fund />} />
       </Routes>
     </div>
   );
