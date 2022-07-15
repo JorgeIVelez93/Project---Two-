@@ -1,9 +1,16 @@
 .fonth3 {
-    font-family: 'Koulen', cursive; 
-    margin: 5vh;
+  font-family: "Koulen", cursive;
+  margin: 5vh;
 }
-.fundsexchange{
-    border: 2px solid #272727;
-    padding: 1vw;
-    border-radius: 3%;
+.fundsexchange {
+  border: 2px solid #272727;
+  padding: 1vw;
+  border-radius: 3%;
+}
+
+@media (max-width: 428px) {
+  .fundsexchange > p {
+    margin-top: -4vh;
+    padding-top: 0vh;
+  }
 }

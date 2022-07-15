@@ -4,7 +4,7 @@ import aboutcss from "./About.css";
 
 const About = () => {
   return (
-    <div>
+    <div className="mobilep">
       <nav className="navcss">
         <Link className="navlinks" to="/home" style={{ color: "#272727" }}>
           Home

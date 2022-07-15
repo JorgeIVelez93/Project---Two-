@@ -33,14 +33,16 @@ const Coin = () => {
 
   return (
     <div className="singlecoin">
-      <nav className="navcss">
+      <nav className="coinnav">
         <Link to="/home" className="navlinks">
+          {" "}
           <img
             src={singleCoin.iconUrl}
             alt="crypto logo"
             className="cryptologohome"
           ></img>
         </Link>
+
         <Link to="/contact" className="navlinks">
           Contact Us
         </Link>
@@ -55,7 +57,10 @@ const Coin = () => {
           <h3 style={{ color: singleCoin.color }}>{singleCoin.name}</h3>
           <p>
             Cost(USD): $
-            {singleCoin.price && Number(singleCoin.price).toFixed(2)}
+            {singleCoin.price &&
+              Number(
+                singleCoin.price && Number(singleCoin.price).toFixed(2)
+              ).toLocaleString()}
           </p>
         </div>
         <div className="coininfo">
@@ -65,7 +70,7 @@ const Coin = () => {
             {singleCoin.marketCap &&
               Number(singleCoin.marketCap).toLocaleString()}
           </p>
-          <a href={singleCoin.websiteUrl} style={{ color: singleCoin.color }}>
+          <a href={singleCoin.websiteUrl}>
             Official Site: {singleCoin.websiteUrl}
           </a>
         </div>

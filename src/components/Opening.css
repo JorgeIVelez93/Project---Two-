@@ -205,8 +205,8 @@ style={{ textDecoration: "none" }}
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  width: 22vw;
-  height: 24vh;
+  width: 18vw;
+  height: 18vh;
   margin: 0;
   padding: 0;
 }
@@ -215,7 +215,7 @@ style={{ textDecoration: "none" }}
         padding: 0.25em 0.75em;
       }
     } */
-@media (max-width: 426px) {
+@media (max-width: 428px) {
   body {
     margin: 0;
     padding: 0;

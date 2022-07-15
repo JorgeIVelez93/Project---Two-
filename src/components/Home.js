@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import Coin from "./Coin";
 import Homecss from "./Home.css";
-import logo from "../images/Screenshot 2022-07-13 135114.webp";
+import companylogo from "../images/quick crypto-logos_transparent.png";
 
 const Home = () => {
   const [coinsList, setCoinsList] = React.useState({});
@@ -38,14 +38,15 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <div className="mobilediv">
       <nav className="navcss">
-        <div>
+        <div className="homeimg">
+          <img src={companylogo} alt="logo"></img>
           <Link to="/home" className="navlinks" style={{ color: "#272727" }}>
             Home
           </Link>
           <Link to="/contact" className="navlinks" style={{ color: "#272727" }}>
-            Contact Us
+            Contact
           </Link>
           <Link to="/about" className="navlinks" style={{ color: "#272727" }}>
             About
@@ -54,7 +55,7 @@ const Home = () => {
       </nav>
       <h1>Crypto-Listo </h1>
       <br></br>
-      <p>From Algorand to USDC. See the top ranked crypto currencies. </p>
+      {/* <p>From Algorand to USDC. See the top ranked crypto currencies. </p> */}
       <div className="homeflex">
         {coinsList.coins &&
           coinsList.coins.map(function (coin) {

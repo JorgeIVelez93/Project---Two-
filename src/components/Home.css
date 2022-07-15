@@ -109,8 +109,17 @@ body p {
   text-decoration: none;
   margin: 0vh 1.5vw;
   font-family: "Ubuntu Mono", monospace;
+  font-size: 2vh;
 }
-@media (max-width: 426px) {
+
+.homeimg > img {
+  width: 10vh;
+  height: 10vh;
+  margin-bottom: -4vh;
+  margin-right: 70vw;
+}
+
+@media (max-width: 428px) {
   body {
     height: 100vw;
     background: linear-gradient(
@@ -205,5 +214,27 @@ body p {
   .navcss {
     margin: 0;
     padding: 0;
+  }
+  .mobilediv {
+    height: 20vh;
+  }
+  .mobilediv > p {
+    width: 100vw;
+    text-align: center;
+  }
+  .navcss {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .homeimg > img {
+    width: 10vh;
+    height: 10vh;
+    margin-left: 30vw;
+  }
+  .homeimg {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
